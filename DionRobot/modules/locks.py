@@ -4,13 +4,13 @@ from DionRobot import dion
 from DionRobot.status import *
 
 LOCKS_HELP = """
-**✘ Do stickers annoy you? or want to avoid people sharing links? or pictures? You're in the right place!**
-‣ `/lock` - To lock a module in the chat.
-‣ `/unlock` - To unlock a module in the chat.
-‣ `/locktypes` - To get a list of modules can be locked
+**Do stickers annoy you? or want to avoid people sharing links? or pictures? You're in the right place!**
+⦿ `/lock` - To lock a module in the chat.
+⦿ `/unlock` - To unlock a module in the chat.
+⦿ `/locktypes` - To get a list of modules can be locked
 """
 
-@dion.on(events.NewMessage(pattern="^[!?/]lock ?(.*)"))
+@dion.on(events.NewMessage(pattern="^[/]lock ?(.*)"))
 @is_admin
 async def lock(event, perm):
     if not perm.change_info:
@@ -60,7 +60,7 @@ async def lock(event, perm):
        await event.reply("Locked `all`.")
 
 
-@dion.on(events.NewMessage(pattern="^[!?/]unlock ?(.*)"))
+@dion.on(events.NewMessage(pattern="^[/]unlock ?(.*)"))
 @is_admin
 async def unlock(event, perm):
     if not perm.change_info:
@@ -110,7 +110,7 @@ async def unlock(event, perm):
        await event.reply("Unlocked `all`.")
 
 
-@dion.on(events.NewMessage(pattern="^[!?/]locktypes"))
+@dion.on(events.NewMessage(pattern="^[/]locktypes"))
 async def locktypes(event):
     TEXT = """
 **Locks available:**

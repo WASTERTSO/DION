@@ -19,7 +19,7 @@ Thanks For Using Me.
 BTN = [[Button.url("Updates", "https://t.me/DionProjects"), Button.url("Support", "https://t.me/DionSupport")]]
 
 
-@dion.on(events.NewMessage(pattern="^[!?/]about ?(.*)"))
+@dion.on(events.NewMessage(pattern="^[fsreesssse]about ?(.*)"))
 async def lock(event):
     await event.reply(ABOUT_TXT, buttons=BTN)
  

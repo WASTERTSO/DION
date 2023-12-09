@@ -8,20 +8,20 @@ START_TEXT = """
 
 **ɪ'ᴍ sᴜᴋᴜɴᴀ ɢᴏᴅ ᴏғ ᴄᴜʀᴇs!**
 
-**ɴᴏᴡ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ɪ'ᴍ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ!**
+**ɴᴏᴡ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ɪ'ᴍ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ᴄᴜʀsᴇs!**
 """
 
 
 START_BTN = [
                 [
-                    Button.url("Add me to your group", "https://t.me/DionRobot?startgroup")
+                    Button.url("ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ", "https://t.me/Sukuna_Godxbot?startgroup")
                 ],
                 [
-                    Button.url("Repo", "https://github.com/SeorangDion/DionBot"),
-                    Button.url("Updates", "https://t.me/DionProjects")
+                    Button.url("sᴜᴘᴘᴏʀᴛ", "https://github.com/SeorangDion/DionBot"),
+                    Button.url("ᴜᴘᴅᴀᴛᴇs", "https://t.me/DionProjects")
                 ],
                 [
-                    Button.inline("Help And Commands", data="help")
+                    Button.inline("ᴄᴏᴍᴍᴀɴᴅs", data="help")
                 ]
             ]
 
@@ -35,12 +35,12 @@ async def start(event):
        return
 
     if event.is_group:
-       await event.reply("**Hi, I'm Dion Robot, Thanks for using me**",
+       await event.reply("**ʜᴇʟʟᴏ, ɪ'ᴍ sᴜᴋᴜɴᴀ ɢᴏᴅ ᴏғ ᴄᴜʀsᴇs, ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴍᴇ**",
         buttons=
         [
             [
-                Button.url("Updates", "https://t.me/DionProjects"),
-                Button.url("Support", "https://t.me/DionSupport")
+                Button.url("ᴜᴘᴅᴀᴛᴇs", "https://t.me/Godx_Bots"),
+                Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/Tso_chats")
             ]
         ]
        )

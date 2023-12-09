@@ -4,7 +4,7 @@ from DionRobot import dion
 btn =[
     [Button.inline("⦁ ᴀᴅᴍɪɴ ⦁", data="admin"), Button.inline("⦁ ʟᴏᴄᴋs ⦁", data="locks")],
     [Button.inline("⦁ ᴘᴜʀɢᴇs ⦁", data="purges"), Button.inline("⦁ ᴜsᴇʀɪɴғᴏ ⦁", data="misc")],
-    [Button.inline("⦁ ᴢᴏᴍʙɪᴇs ⦁", data="zombies"), Button.inline("Back", data="home")]]
+    [Button.inline("⦁ ᴢᴏᴍʙɪᴇs ⦁", data="zombies"), Button.inline("◀", data="home")]]
 
 
 HELP_TEXT = """

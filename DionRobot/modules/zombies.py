@@ -9,9 +9,9 @@ from telethon.tl.types import ChannelParticipantsAdmins, ChatBannedRights
 
 
 CLEANER_HELP = """
-**✘ This is A Module To Remove Deleted Accounts From Your Groups!**
-‣ `/zombies` - To find zombies accounts in your chat.
-‣ `/zombies clean` - To remove the deleted accounts from your chat.
+**This is A Module To Remove Deleted Accounts From Your Groups!**
+⦿ `/zombies` - To find zombies accounts in your chat.
+⦿ `/zombies clean` - To remove the deleted accounts from your chat.
 """
 
 
@@ -39,7 +39,7 @@ UNBAN_RIGHTS = ChatBannedRights(
 )
 
 
-@dion.on(events.NewMessage(pattern="^[!?/]zombies ?(.*)"))
+@dion.on(events.NewMessage(pattern="^[/]zombies ?(.*)"))
 @is_admin
 async def clean(event, perm):
     if not perm.ban_users:

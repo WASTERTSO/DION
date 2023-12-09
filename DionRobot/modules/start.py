@@ -4,11 +4,11 @@ from telethon import events, Button
 
 
 START_TEXT = """
-**Hi [{}](tg://user?id={})!**
+**ʜᴇʟʟᴏ [{}](tg://user?id={})!**
 
-**Dion Robot is a powerful group management bot built to help you manage your group!**
+**ɪ'ᴍ sᴜᴋᴜɴᴀ ɢᴏᴅ ᴏғ ᴄᴜʀᴇs!**
 
-**Click the below button for getting help menu!**
+**ɴᴏᴡ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ɪ'ᴍ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ!**
 """
 
 

@@ -9,12 +9,12 @@ from telethon.tl.functions.users import GetFullUserRequest
 
 
 MISC_HELP = """
-**✘ An "odds and ends" module for small, simple commands which don't really fit anywhere.**
-‣ `/id` - To get current chat id or replied user id.
-‣ `/info` - To get info of a user.
+**An "odds and ends" module for small, simple commands which don't really fit anywhere.**
+⦿ `/id` - To get current chat id or replied user id.
+⦿ `/info` - To get info of a user.
 """
 
-@dion.on(events.NewMessage(pattern="^[!?/]id ?(.*)"))
+@dion.on(events.NewMessage(pattern="^[/]id ?(.*)"))
 async def id(event):
 
     if event.is_private:
@@ -33,7 +33,7 @@ async def id(event):
 
     await event.reply(f"❏ **{msg.sender.first_name} ID**:\n└ `{msg.sender_id}`.\n\n❏ **Group's ID**:\n└ `{event.chat_id}`")
  
-@dion.on(events.NewMessage(pattern="^[!?/]info ?(.*)"))
+@dion.on(events.NewMessage(pattern="^[/]info ?(.*)"))
 async def info(event):
 
     sed = await dion(P(user_id=event.sender_id, offset=42, max_id=0, limit=80))

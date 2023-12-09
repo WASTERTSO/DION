@@ -4,24 +4,24 @@ from telethon import events, Button
 
 
 START_TEXT = """
-**ʜᴇʟʟᴏ [{}](tg://user?id={})!**
+**ʜᴇʏ [{}](tg://user?id={})!**
 
-**ɪ'ᴍ sᴜᴋᴜɴᴀ ɢᴏᴅ ᴏғ ᴄᴜʀᴇs!**
+**ᴛʜɪs ɪs ɢᴏᴋᴜ 🐉**
 
-**ɴᴏᴡ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ɪ'ᴍ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ᴄᴜʀsᴇs!**
+**ɪ'ᴍ ᴍᴏsᴛ ᴘᴏᴡᴇʀғᴜʟ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ + ᴍᴜsɪᴄ ʙᴏᴛ ᴡɪᴛʜ ᴀᴡsᴏᴍᴇ ᴀɴᴅ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs ࿈**
 """
 
 
 START_BTN = [
                 [
-                    Button.url("ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ", "https://t.me/Sukuna_Godxbot?startgroup")
+                    Button.url("⦁ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⦁", "https://t.me/Goku_Godxbot?startgroup")
                 ],
                 [
-                    Button.url("sᴜᴘᴘᴏʀᴛ", "https://github.com/SeorangDion/DionBot"),
-                    Button.url("ᴜᴘᴅᴀᴛᴇs", "https://t.me/DionProjects")
+                    Button.url("⦁ sᴜᴘᴘᴏʀᴛ ⦁", "https://t.me/Tso_Chats"),
+                    Button.url("⦁ ᴜᴘᴅᴀᴛᴇs ⦁", "https://t.me/Godx_Bots")
                 ],
                 [
-                    Button.inline("ᴄᴏᴍᴍᴀɴᴅs", data="help")
+                    Button.inline("⦁ ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs ⦁", data="help")
                 ]
             ]
 
@@ -35,12 +35,12 @@ async def start(event):
        return
 
     if event.is_group:
-       await event.reply("**ʜᴇʟʟᴏ, ɪ'ᴍ sᴜᴋᴜɴᴀ ɢᴏᴅ ᴏғ ᴄᴜʀsᴇs, ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴍᴇ**",
+       await event.reply("**ʜᴇʏ ɪ'ᴍ ɢᴏᴋᴜ ᴛʜᴀɴᴋs ғᴏʀ ᴜsɪɴɢ ᴍᴇ**",
         buttons=
         [
             [
-                Button.url("ᴜᴘᴅᴀᴛᴇs", "https://t.me/Godx_Bots"),
-                Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/Tso_chats")
+                Button.url("⦁ ᴜᴘᴅᴀᴛᴇs ⦁", "https://t.me/Godx_Bots"),
+                Button.url("⦁ sᴜᴘᴘᴏʀᴛ ⦁", "https://t.me/Tso_chats")
             ]
         ]
        )

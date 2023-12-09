@@ -9,23 +9,23 @@ from telethon.tl.functions.messages import ExportChatInviteRequest
 
 
 ADMIN_TEXT = """
-**✘ A module from which admins of the chat can use!**
-‣ `/ban` - To ban a user in the chat.
-‣ `/kick` - To kick a user in the chat.
-‣ `/pin` - To pinned a reply msg.
-‣ `/unpin` - To Unpin the latest pinned msg.
-‣ `/unpinall` - To unpinall all pinned message at once.
-‣ `/pinned` - To get current pinned msg.
-‣ `/promote` - To Promote a user in the chat.
-‣ `/demote` - To Demote a user in the chat.
-‣ `/invitelink` - To get invitelink of a chat.
+**A module from which admins of the chat can use!**
+⦿ `/ban` - To ban a user in the chat.
+⦿ `/kick` - To kick a user in the chat.
+⦿ `/pin` - To pinned a reply msg.
+⦿ `/unpin` - To Unpin the latest pinned msg.
+⦿ `/unpinall` - To unpinall all pinned message at once.
+⦿ `/pinned` - To get current pinned msg.
+⦿ `/promote` - To Promote a user in the chat.
+⦿ `/demote` - To Demote a user in the chat.
+⦿ `/invitelink` - To get invitelink of a chat.
 """
 
 @dion.on(events.callbackquery.CallbackQuery(data="admin"))
 async def _(event):
     await event.edit(ADMIN_TEXT, buttons=[[Button.inline("« Bᴀᴄᴋ", data="help")]])
 
-@dion.on(events.NewMessage(pattern="^[!?/]promote ?(.*)"))
+@dion.on(events.NewMessage(pattern="^[/]promote ?(.*)"))
 @is_admin
 async def promote(event, perm):
     if event.is_private:
@@ -56,7 +56,7 @@ async def promote(event, perm):
     await event.reply(f"Succesfully Promoted {input_str} in {event.chat.title}")
  
 
-@dion.on(events.NewMessage(pattern="^[!?/]demote ?(.*)"))
+@dion.on(events.NewMessage(pattern="^[/]demote ?(.*)"))
 @is_admin
 async def demote(event, perm):
     if event.is_private:
@@ -86,7 +86,7 @@ async def demote(event, perm):
     await event.reply(f"Succesfully Demoted {input_str} in {event.chat.title}")
  
 
-@dion.on(events.NewMessage(pattern="^[!?/]kick ?(.*)"))
+@dion.on(events.NewMessage(pattern="^[/]kick ?(.*)"))
 @is_admin
 async def kick(event, perm):
     if event.is_private:
@@ -108,7 +108,7 @@ async def kick(event, perm):
     await event.reply(f"Succesfully Kicked [{info.first_name}](tg://user?id={replied_user}) from {event.chat.title}")
 
 
-@dion.on(events.NewMessage(pattern="^[!?/]ban ?(.*)"))
+@dion.on(events.NewMessage(pattern="^[/]ban ?(.*)"))
 @is_admin
 async def ban(event, perm):
     if event.is_private:
@@ -129,7 +129,7 @@ async def ban(event, perm):
     await event.reply(f"Succesfully Banned [{info.first_name}](tg://user?id={replied_user}) in {event.chat.title}")
 
 
-@dion.on(events.NewMessage(pattern="^[?!/]pinned"))
+@dion.on(events.NewMessage(pattern="^[/]pinned"))
 async def get_pinned(event):
     chat_id = (str(event.chat_id)).replace("-100", "")
 
@@ -138,7 +138,7 @@ async def get_pinned(event):
     await event.reply(tem, parse_mode="html", link_preview=False)
 
 
-@dion.on(events.NewMessage(pattern="^[!?/]pin ?(.*)"))
+@dion.on(events.NewMessage(pattern="^[/]pin ?(.*)"))
 @is_admin
 async def pin(event, perm):
     if not perm.pin_messages:
@@ -155,7 +155,7 @@ async def pin(event, perm):
     await dion.pin_message(event.chat_id, msg)
 
 
-@dion.on(events.NewMessage(pattern="^[!?/]unpin ?(.*)"))
+@dion.on(events.NewMessage(pattern="^[/]unpin ?(.*)"))
 @is_admin
 async def unpin(event, perm):
     if not perm.pin_messages:
@@ -166,7 +166,7 @@ async def unpin(event, perm):
     await dion.unpin_message(event.chat_id, ok)
     await event.reply(f"Successfully unpinned [this](t.me/{event.chat.username}/{ok.id}) message.", link_preview=False)
 
-@dion.on(events.NewMessage(pattern="^[!?/]permapin"))
+@dion.on(events.NewMessage(pattern="^[/]permapin"))
 @is_admin
 async def permapin(event, perm):
     if not perm.pin_messages:
@@ -180,7 +180,7 @@ async def permapin(event, perm):
     await dion.pin_message(event.chat_id, hn, notify=True)
 
 
-@dion.on(events.NewMessage(pattern="^[!?/]unpinall"))
+@dion.on(events.NewMessage(pattern="^[/]unpinall"))
 async def unpinall(event, perm):
     if not perm.pin_messages:
        await event.reply("You are missing the following rights to use this command:__Can Pin Message!__")
@@ -215,7 +215,7 @@ async def cancel(event):
     await event.answer("You are missing the following rights to use this command: Can Pin Message!", alert=True)
 
 
-@dion.on(events.NewMessage(pattern="^[!?/]invitelink"))
+@dion.on(events.NewMessage(pattern="^[/]invitelink"))
 async def invitelink(event):
     if event.is_private:
        await event.reply("This cmd is made to be used in groups, not in PM!")

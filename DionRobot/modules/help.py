@@ -2,28 +2,28 @@ from telethon import events, Button
 from DionRobot import dion
 
 btn =[
-    [Button.inline("Admin", data="admin"), Button.inline("Locks", data="locks")],
-    [Button.inline("Purges", data="purges"), Button.inline("UserInfo", data="misc")],
-    [Button.inline("Zombies", data="zombies"), Button.inline("Back", data="home")]]
+    [Button.inline("⦁ ᴀᴅᴍɪɴ ⦁", data="admin"), Button.inline("⦁ ʟᴏᴄᴋs ⦁", data="locks")],
+    [Button.inline("⦁ ᴘᴜʀɢᴇs ⦁", data="purges"), Button.inline("⦁ ᴜsᴇʀɪɴғᴏ ⦁", data="misc")],
+    [Button.inline("⦁ ᴢᴏᴍʙɪᴇs ⦁", data="zombies"), Button.inline("Back", data="home")]]
 
 
 HELP_TEXT = """
-**Dion Robot help menu:**
+**ɢᴏᴋᴜ ʜᴇʟᴘ ᴍᴇɴᴜ:**
 
-/start - To Start Me ;)
-/help - To Get Available Help Menu
+/start ⤷ ᴛᴏ sᴛᴀʀᴛ ᴍᴇ ;)
+/help ⤷ ᴛᴏ ɢᴇᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ʜᴇʟᴘ ᴍᴇɴᴜ 
 
-__Report Bugs At--->__ @DionSupport
-All cmd can be used with '/' or '!'.
+__ʀᴇᴘᴏʀᴛ ʙᴜɢs ᴀᴛ__ @TSO_CHATS
+ᴀʟʟ ᴄᴍᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ </> ᴏʀ <!>
 """
 
 
 @dion.on(events.NewMessage(pattern="[!?/]help ?(.*)"))
 async def help(event):
     if event.is_group:
-       await event.reply("Contact me in PM to get available help menu!", 
+       await event.reply("ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ ɪɴ ᴘᴍ ғᴏʀ ʜᴇʟᴘ", 
        buttons=[
-       [Button.url("Help And Commands!", "https://t.me/DionRobot?start=help")]])
+       [Button.url("⦁ ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs ⦁", "https://t.me/Goku_Godxbot?start=help")]])
        return
 
     await event.reply(HELP_TEXT, buttons=btn)
@@ -31,9 +31,9 @@ async def help(event):
 @dion.on(events.NewMessage(pattern="^/start help"))
 async def shelp(event):
     if event.is_group:
-       await event.reply("Contact me in PM to get available help menu!", 
+       await event.reply("ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ ɪɴ ᴘᴍ ғᴏʀ ʜᴇʟᴘ", 
        buttons=[
-       [Button.url("Help And Commands!", "https://t.me/DionRobot?start=help")]])
+       [Button.url("⦁ ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs ⦁", "https://t.me/Goku_Godxbot?start=help")]])
        return
 
     await event.reply(HELP_TEXT, buttons=btn)

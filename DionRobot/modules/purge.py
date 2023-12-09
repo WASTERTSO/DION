@@ -5,13 +5,13 @@ from DionRobot import dion
 from DionRobot.status import *
 
 PURGE_TEXT = """
-**✘ Need to delete lots of messages? That's what purges are for!**
-‣ `/purge` - Reply to a msg to delete msgs from there.
-‣ `/spurge` - Same as purge, but doesnt send the final confirmation message.
-‣ `/del` - Deletes the replied to message.
+**Need to delete lots of messages? That's what purges are for!**
+⦿ `/purge` - Reply to a msg to delete msgs from there.
+⦿ `/spurge` - Same as purge, but doesnt send the final confirmation message.
+⦿ `/del` - Deletes the replied to message.
 """
 
-@dion.on(events.NewMessage(pattern=r"^[?/!]purge"))
+@dion.on(events.NewMessage(pattern=r"^[/]purge"))
 @is_admin
 async def purge_messages(event, perm):
     if not perm.delete_messages:
@@ -39,7 +39,7 @@ async def purge_messages(event, perm):
     text = f"Purged in {time_:0.2f} Second(s)"
     await event.respond(text, parse_mode='markdown')
 
-@dion.on(events.NewMessage(pattern="^[!?/]spurge"))
+@dion.on(events.NewMessage(pattern="^[/]spurge"))
 @is_admin
 async def spurge(event, perm):
     if not perm.delete_messages:
@@ -64,8 +64,8 @@ async def spurge(event, perm):
 
     await event.client.delete_messages(event.chat_id, messages)
 
-@dion.on(events.NewMessage(pattern="^[!?/]del$"))
-@dion.on(events.NewMessage(pattern="^[!?/]delete$"))
+@dion.on(events.NewMessage(pattern="^[/]del$"))
+@dion.on(events.NewMessage(pattern="^[/]delete$"))
 @is_admin
 async def delete_messages(event, perm):
     if not perm.delete_messages:

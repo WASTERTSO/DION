@@ -1,43 +1,40 @@
 {
-      "name": "Dion Robot",
-      "description": "A powerfull telegram bot to manage your group.",
-      "keywords": [
-         "telegram",
-         "advance",
-         "manager",
-         "bot",
-         "DionRobot"
-      ],
-    
-   "logo":    "https://telegra.ph//file/5c4f15021820308c96606.jpg",  
-   "repository": "https://github.com/SeorangDion/DionBot",
-   "addons": [
-    {
-      "plan": "heroku-postgresql",
-      "options": {
-        "version": "16"
-      }
-    }
-  ],
-   "env": {
-    "ENV": {
-      "description": "Setting this to ANYTHING will enable heroku.",
-      "value": "ANYTHING"
-    },
-    "TOKEN": {
-      "description": "Your Bot Token.",
-      "value": ""
-    }
-   },
-    "buildpacks": [
-     {
-      "url": "heroku/python"
-     }
-    ],
-    "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "free"
-    }
-  }
+"name": "Dion Robot",
+"description": "A powerful telegram bot to manage your group.",
+"keywords": [
+"telegram",
+"advance",
+"manager",
+"bot",
+"DionRobot"
+],
+"logo": "(link unavailable)",
+"repository": "(link unavailable)",
+"addons": [
+{
+"plan": "heroku-postgresql:mini"
+}
+],
+"env": {
+"ENV": {
+"description": "Setting this to ANYTHING will enable heroku.",
+"value": "ANYTHING"
+},
+"TOKEN": {
+"description": "Your Bot Token.",
+"value": ""
+}
+},
+"buildpacks": [
+{
+"url": "heroku/python"
+}
+],
+"formation": {
+"worker": {
+"quantity": 1,
+"size": "Standard-1X"
+}
+},
+"stack": "container"
 }
